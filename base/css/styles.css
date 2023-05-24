@@ -1,0 +1,140 @@
+:root{
+    --primario: #0097a7;
+    --secundario: #FFC107;
+    --grisclaro: #DFE9F3;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /* 1rem = 10px*/
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+}
+
+/**CSS DEL ENCAVEZO DE LA PAGINA**/
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+}span{
+    font-size: 1.5rem;
+}
+
+
+/**CSS DE LA NAVEGACION SUPERIOR **/
+
+
+.navegacionSuperior {
+    background-color: #0097a7;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.navegacionSuperior a:hover{
+    background-color: #FFC107;
+}
+
+.ubicacionContacto{
+    background-image: url(../img/corunha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    color: aliceblue;
+}
+
+
+/**CSS DEL MENU DESPLEGABLE**/
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .navbar a {
+    margin-right: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+    
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    padding: 10px;
+    background-color: var(--primario);
+    box-shadow: 0 0 0 1px var(--grisclaro);
+    width: max-content;
+    list-style-type: circle;
+    padding-left: 2.2rem;
+    color: white;
+    text-decoration: none;
+  }
+  .dropdown-menu a:visited{
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 5px;
+    
+
+  }
+  
+  .dropdown-toggle.active + .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }
+
+  
+
+/**CSS DEL PIE DE PAGINA**/
+footer{
+    text-align: center;
+    bottom: 0;   
+}
+
+footer p{
+    margin-right: 1%;
+}
+
+/**GLOBALES**/
+
+
+
+
+      
+@media (max-width: 480px){ /**MOVILES**/
+    
+}
+@media (min-width: 768px){ /**TABLETS**/
+
+
+
+
+}
+@media (min-width: 1140px){ /**PORTATIL**/
+
+}
+
+
