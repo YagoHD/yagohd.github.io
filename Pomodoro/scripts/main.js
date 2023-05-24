@@ -44,7 +44,6 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   var timerInterval;
-
   startButton.addEventListener('click', function() {
     timerInterval = setInterval(updateTimer, 1000);
     startButton.disabled = true;
