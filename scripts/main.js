@@ -59,6 +59,7 @@ sections.forEach(section => {
 });
 
 //Animacion Encabezado
+//Animacion Encabezado
 const header = document.querySelector('header');
 const titulo = document.querySelector('.titulo');
 const originalText = titulo.childNodes[0].nodeValue;
@@ -66,14 +67,22 @@ const textos = ['0', '1']; // Textos que se animarán
 const duration = 100; // Duración de la animación en milisegundos (más alto = más lento)
 
 let animation;
+let isAnimating = false; // Variable para controlar el estado de la animación
 
 titulo.addEventListener('mouseenter', () => {
+  if (isAnimating) {
+    return; // Si la animación ya está en curso, no hacer nada
+  }
+
+  isAnimating = true;
+
   let currentIndex = 0;
   let currentChar = 0;
 
   function updateText() {
     if (currentChar >= originalText.length) {
       titulo.childNodes[0].nodeValue = originalText; // Restaurar el texto original al final de la animación
+      isAnimating = false; // La animación ha terminado, se puede reproducir nuevamente
       return;
     }
 
@@ -92,6 +101,8 @@ titulo.addEventListener('mouseenter', () => {
 
   updateText();
 });
+
+
 
 //Limitador para que en el formulario, solo se introduzcan numeros, en el telefono
 const inputNumerico = document.getElementById('numerico');
