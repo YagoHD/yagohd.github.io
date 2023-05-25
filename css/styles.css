@@ -5,6 +5,7 @@
     --grisclaro: #DFE9F3;
     --blanco: #ffffff;
     --negro: #000000;
+
 }
 
 html {
@@ -32,9 +33,15 @@ body {
 
 
 /**CSS DEL ENCAVEZO DE LA PAGINA**/
+header {
+    position: relative;
+}
+
 .titulo {
     text-align: center;
     font-size: 3rem;
+    position: relative;
+    overflow: hidden;
     color: black;
 }
 
@@ -180,7 +187,12 @@ footer p {
     padding: 1rem;
     border-radius: 1rem;
 }
-
+.resaltado {
+    border: 2px solid var(--primario); /* Estilo del recuadro de resaltado */
+    padding: 1rem;
+    box-shadow: 0 0 5px 5px rgba(85, 84, 84, 0.27);
+    border-radius: 1rem; /* Redondear las esquinas */
+  }
 .conocimiento {
     display: flex;
     flex-direction: column;
@@ -318,6 +330,7 @@ footer p {
     padding: 5px 10px;
     background-color: #eee;
     cursor: pointer;
+    border-radius: 1rem;
     font-size: 2rem;
 }
 
