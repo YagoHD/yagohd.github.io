@@ -1,4 +1,4 @@
-//Funcionamiento del menu desplegable, tanto para moviles como para ordenador.
+//Menú desplegable
 document.addEventListener('DOMContentLoaded', function () {
   var dropdownToggle = document.querySelector('.dropdown-toggle');
   var dropdownMenu = document.querySelector('.dropdown-menu');
@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-//Funcionamiento del menu doble
-// Mostrar formulario 1 al cargar la página
+//Formulario doble
 formulario1.style.display = 'block';
 formulario2.style.display = 'none';
 
@@ -43,10 +42,8 @@ function mostrarMensaje() {
   }, 4000); // 3000 ms (3 segundos) - Puedes ajustar este valor según tus necesidades
 }
 
-//Añadir recuadro a los conocimientos seleccionados
-// Obtén todos los elementos con la clase "conocimiento"
+//Sobresalrae Conocimientos
 const sections = document.querySelectorAll('.conocimiento');
-
 // Itera sobre cada sección y agrega los eventos de ratón necesarios
 sections.forEach(section => {
   section.addEventListener('mouseover', () => {
@@ -58,13 +55,13 @@ sections.forEach(section => {
   });
 });
 
-//Animacion Encabezado
+
 //Animacion Encabezado
 const header = document.querySelector('header');
 const titulo = document.querySelector('.titulo');
 const originalText = titulo.childNodes[0].nodeValue;
 const textos = ['0', '1']; // Textos que se animarán
-const duration = 100; // Duración de la animación en milisegundos (más alto = más lento)
+const duration = 150; // Duración de la animación en milisegundos (más alto = más lento)
 
 let animation;
 let isAnimating = false; // Variable para controlar el estado de la animación
@@ -102,12 +99,10 @@ titulo.addEventListener('mouseenter', () => {
   updateText();
 });
 
-
-
 //Limitador para que en el formulario, solo se introduzcan numeros, en el telefono
 const inputNumerico = document.getElementById('numerico');
 
-inputNumerico.addEventListener('input', function(event) {
+inputNumerico.addEventListener('input', function (event) {
   const valor = event.target.value;
   const numeros = /^[0-9]*$/;
 

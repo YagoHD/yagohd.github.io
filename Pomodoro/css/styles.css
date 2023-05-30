@@ -1,32 +1,38 @@
-:root{
-    --primario: #0097a7;
-    --secundario: #FFC107;
-    --grisclaro: #DFE9F3;
-    --blanco: #ffffff;
-    --negro: #000000;
+:root {
+  --primario: #0097a7;
+  --secundario: #FFC107;
+  --grisclaro: #DFE9F3;
+  --blanco: #ffffff;
+  --negro: #000000;
 }
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
-}
-*, *:before, *:after{
-    box-sizing: inherit;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-body{
-    font-size: 16px; /* 1rem = 10px*/
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  /* 1rem = 10px*/
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
 }
 
 /**CSS DEL ENCAVEZO DE LA PAGINA**/
 .titulo {
-    text-align: center;
-    font-size: 3rem;
-    color: black;
-}span{
-    font-size: 1.5rem;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+
+span {
+  font-size: 1.5rem;
 }
 
 
@@ -34,23 +40,23 @@ body{
 
 
 .navegacionSuperior {
-    background-color: #0097a7;
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+  background-color: #0097a7;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.navegacionSuperior a:hover{
-    background-color: #FFC107;
+.navegacionSuperior a:hover {
+  background-color: #FFC107;
 }
 
-.ubicacionContacto{
-    background-image: url(../img/corunha.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 45rem;
-    position: relative;
-    color: aliceblue;
+.ubicacionContacto {
+  background-image: url(../img/corunha.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+  position: relative;
+  color: aliceblue;
 }
 
 
@@ -72,9 +78,10 @@ body{
 
 .dropdown-toggle {
   cursor: pointer;
-  
+
 }
-.dropdown-toggle:hover svg{
+
+.dropdown-toggle:hover svg {
   background-color: var(--secundario);
 }
 
@@ -97,41 +104,43 @@ body{
   font-weight: bold;
 }
 
-.dropdown-menu a:visited{
+.dropdown-menu a:visited {
   color: inherit;
   text-decoration: none;
 }
 
 .dropdown-menu li {
   margin-bottom: 5px;
-  
+
 
 }
 
-.dropdown-toggle.active + .dropdown-menu,
+.dropdown-toggle.active+.dropdown-menu,
 .dropdown-menu:hover {
   display: block;
 }
-  
+
 
 /**CSS DEL PIE DE PAGINA**/
-footer{
-    text-align: center;
-    bottom: 0;   
+footer {
+  text-align: center;
+  bottom: 0;
 }
 
-footer p{
-    margin-right: 1%;
+footer p {
+  margin-right: 1%;
 }
 
 /**UNICAS**/
 
-.pomodoro{
+
+.pomodoro {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-#controls{
+
+#controls {
   margin-top: 1.5rem;
 }
 
@@ -152,7 +161,8 @@ footer p{
   z-index: 2;
   text-align: center;
 }
-#time-display span{
+
+#time-display span {
   font-size: 48px;
 }
 
@@ -179,9 +189,65 @@ footer p{
   animation: fill-progress linear infinite;
 }
 
+.pomodoro2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timer2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#time-display2 {
+  font-size: 24px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+#time-display2 span {
+  font-size: 24px;
+}
+
+.progress-ring2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(245, 137, 137);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(121, 226, 130);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform-origin: center center;
+  transition: clip-path 1s linear;
+  animation: fill-progress linear infinite;
+}
+
 @keyframes fill-progress {
-  0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-  100% { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
 }
 
 
@@ -189,6 +255,7 @@ footer p{
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -198,23 +265,27 @@ footer p{
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-      
-@media (max-width: 480px){ /**MOVILES**/
-    
-}
-@media (min-width: 768px){ /**TABLETS**/
 
-
-
-
-}
-@media (min-width: 1140px){ /**PORTATIL**/
+@media (max-width: 480px) {
+  /**MOVILES**/
 
 }
 
+@media (min-width: 768px) {
+  /**TABLETS**/
 
+
+
+
+}
+
+@media (min-width: 1140px) {
+  /**PORTATIL**/
+
+}
